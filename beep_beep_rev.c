@@ -1,3 +1,21 @@
+/*
+    This code is written from a course ECE 4760: Design with Microcontrollers
+    at Cornell University
+    credit: V. Hunter Adams (vha3@cornell.edu)
+
+    This is an experiment with the multicore capabilities on the
+    RP2040. The program instantiates a timer interrupt on each core.
+    Each of these timer interrupts writes to a separate channel
+    of the SPI DAC and does DDS of two sine waves of two different
+    frequencies. These sine waves are amplitude-modulated to "beeps."
+
+    GPIO 5 (pin 7) Chip select
+    GPIO 6 (pin 9) SCK/spi0_sclk
+    GPIO 7 (pin 10) MOSI/spi0_tx
+    3.3v (pin 36) -> VCC on DAC 
+    GND (pin 3)  -> GND on DAC 
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

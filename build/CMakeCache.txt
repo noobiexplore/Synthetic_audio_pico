@@ -46,15 +46,11 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: 'Debug', 'Release', 'MinSizeRel',
-// 'RelWithDebInfo'.
-CMAKE_BUILD_TYPE:STRING=Release
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
-//Enable/Disable color output during build.
-CMAKE_COLOR_MAKEFILE:BOOL=ON
-
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/arm-none-eabi-g++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/arm-none-eabi-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -79,8 +75,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/arm-none-eabi-gcc
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/arm-none-eabi-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -123,8 +119,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -132,8 +128,8 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/arm-none-eabi-ld
 
-//Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/ninja
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -343,8 +339,6 @@ CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
 CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//STRINGS property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build
 //Major version of cmake used to create the current loaded cache
@@ -353,8 +347,6 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=22
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
-//ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
-CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -407,12 +399,10 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+CMAKE_GENERATOR:INTERNAL=Ninja
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
@@ -493,7 +483,7 @@ PICO_BOOT_STAGE2_DIR:INTERNAL=/home/fahim/pico/pico-sdk/src/rp2_common/boot_stag
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/fahim/pico/pico-sdk/cmake/preload/platforms
 PICO_CMAKE_PRELOAD_PLATFORM_FILE:INTERNAL=/home/fahim/pico/pico-sdk/cmake/preload/platforms/rp2040.cmake
 PICO_COMPILER_ASM:INTERNAL=/usr/bin/arm-none-eabi-gcc
-PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/fahim/pico/pico-sdk/src/rp2_common/cmsis /home/fahim/pico/pico-sdk/src/rp2040/hardware_regs
+PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/fahim/pico/pico-sdk/src/rp2_common/cmsis /home/fahim/pico/pico-sdk/src/rp2040/hardware_regs /home/fahim/pico/pico-sdk/src/rp2_common/cmsis /home/fahim/pico/pico-sdk/src/rp2040/hardware_regs
 PICO_DOXYGEN_PATHS:INTERNAL= /home/fahim/pico/pico-sdk/src/common /home/fahim/pico/pico-sdk/lib/cyw43-driver/src /home/fahim/pico/pico-sdk/src/rp2_common /home/fahim/pico/pico-sdk/src/rp2040
 PICO_NO_HARDWARE:INTERNAL=0
 PICO_ON_DEVICE:INTERNAL=1
