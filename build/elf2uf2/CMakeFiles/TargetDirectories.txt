@@ -1,5 +1,0 @@
-/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build/elf2uf2/CMakeFiles/elf2uf2.dir
-/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build/elf2uf2/CMakeFiles/edit_cache.dir
-/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build/elf2uf2/CMakeFiles/rebuild_cache.dir
-/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
-/media/fahim/Family/Fahim/Electrical Engineering/ECE 4760/DAC/dac_resume/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
